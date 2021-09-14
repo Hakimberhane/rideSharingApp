@@ -1,0 +1,50 @@
+
+ .menu-header-bg {
+   height:220px;
+   width:350px;
+   background:#7590d6;
+   background:linear-gradient(90deg,#7590d6 0%,#4d71d7 100%);
+   box-shadow:0px 1px 10px rgba(98,140,255,0);
+   margin-left:-18px;
+   margin-top:-50px;
+   margin-bottom:0px;
+ }
+
+ .header-content {
+   position:absolute;
+   top:50px;
+   left:15px;
+   display:flect;
+   align-item:center;
+  
+ };
+ .slogan{
+   color:red;
+   position:absolute;
+   top:0px;
+   display:flex;
+   align-item:center;
+ 
+ }
+
+ .menu-items {
+   margin:0px;
+   padding:0px;
+
+   ion-img {
+     
+    margin:0px;
+    margin-left:10px;
+    padding:0px;
+   }
+   ion-item {
+     margin:0px;
+     padding:0px;
+   }
+ }
+
+ .menu-header-name {
+   font-weight:700;
+   font-size:20px;
+   color:#000039;
+ }

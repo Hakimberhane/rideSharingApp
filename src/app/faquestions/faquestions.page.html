@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios class="new-background-color">
+ 
+    <ion-title>
+      Frequently Asked Questions
+    </ion-title>
+
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="light"></ion-back-button>
+    </ion-buttons>
+    
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+<ion-card style="border-radius: 10px 10px 10px 10px;">
+  <div text-center>
+     <h3>General Questions:</h3>
+  </div>
+  <ion-list *ngFor="let item of information; let i = index;" class="accordion-list" detail="false" no-padding lines="none" style="border-bottom: 1px solid lightgray;">
+
+    <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'section-active': item.open, 'section': !item.open}">
+      <ion-icon slot="end" name="arrow-forward" *ngIf="!item.open"></ion-icon>
+      <ion-icon slot="end" name="arrow-down" *ngIf="item.open"></ion-icon>
+
+      <ion-label>
+        {{item.faq}} 
+      </ion-label>
+    </ion-item>
+             <div *ngIf="item.open" style="padding-left:20px;paddin-right:px;display:block">
+          <p> {{item.answer}} </p>
+    </div>
+
+  </ion-list>
+</ion-card>
+</ion-content>

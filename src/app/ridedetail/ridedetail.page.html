@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios>
+       <ion-title style="color:orange">Route {{routeData.routeId}}-{{routeData.subrouteno}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="lightgrey"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+<ion-grid>
+
+<ion-row>
+ <ion-col>
+   <ion-row style="margin:0;padding:0">
+    <ion-col>
+       <p style="color:lightgray;font-size:12px;margin:0">Departure</p>
+       <p style="color:black;font-size:15px;margin-top:4px">{{routeData.departure}}</p>       
+    </ion-col>
+    <ion-col style="text-align:right">
+       <p style="color:lightgray;font-size:12px;margin:0">Arrival</p>
+        <p style="color:black;font-size:15px;margin-top:4px">{{routeData.destination}}</p>       
+    </ion-col>
+  </ion-row>
+   <ion-row style="margin:0 !important;padding:0">
+    <ion-col>
+       <p style="color:lightgray;font-size:12px;margin:0">Departure Time ({{routeData.pickupDay}} {{routeData.pickupDate}})</p>
+
+       <p style="color:black;font-size:15px;margin-top:4px">{{routeData.pickupTime}}</p>       
+    </ion-col>
+   <ion-col style="text-align:right">
+       <p style="color:lightgray;font-size:12px;margin:0"><span style="color:orange">3</span> seats available</p>
+        <p style="color:black;font-size:15px;margin-top:4px">{{routeData.fare}} birr/trip</p>       
+    </ion-col>
+  </ion-row>
+
+  </ion-col>
+  </ion-row>
+
+
+
+  <ion-row>
+ <ion-col style=" border-top: 1px solid lightgray;">
+ <ion-row>
+  <ion-col style="margin:0px;padding:0px">
+
+<p style="padding:0px;margin:0px;color:lightgrey">Number of seats:</p>
+</ion-col>
+
+   <ion-col style="text-align:right">
+
+<p style="padding:0px;margin:0px;color:lightgrey">Total</p>
+</ion-col>
+</ion-row>
+
+   <ion-row style="margin:0 !important;padding:0">
+
+   
+   <ion-col style="margin:0 !important;padding:0">
+
+
+<ion-button #first (click)="addSeats($event.target,'first',1)"  shape="round" class="btn" size="small" [color]="buttonClicked =='first'? 'tertiary':'medium'">1</ion-button>
+
+
+<ion-button #second (click)="addSeats($event.target,'second',2)"  shape="round" class="btn" size="small" [color]="buttonClicked =='second'? 'tertiary':'medium'">2</ion-button>
+
+
+<ion-button #third (click)="addSeats($event.target,'third',3)"  shape="round" class="btn" size="small" [color]="buttonClicked =='third'? 'tertiary':'medium'">3</ion-button>
+
+<ion-button #fourth (click)="addSeats($event.target,'fourth',4)"  shape="round" class="btn" size="small" [color]="buttonClicked =='fourth'? 'tertiary':'medium'">4</ion-button>
+
+<ion-button #fifth (click)="addSeats($event.target,'fifth',5)"  shape="round" class="btn" size="small" [color]="buttonClicked =='fifth'? 'tertiary':'medium'">5</ion-button>
+
+
+
+</ion-col>
+
+   <ion-col style="text-align:right">
+
+
+ <ion-label style="margin-top:10px;text-align:center">{{routeData.total}} birr</ion-label>
+
+
+</ion-col>
+</ion-row>
+
+ </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-card>
+
+
+<div style="text-align:center">
+      <ion-button (click)='bookTrip()' color="dark" expand="full" class="bookButton">Complete booking</ion-button>
+</div>
+
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>

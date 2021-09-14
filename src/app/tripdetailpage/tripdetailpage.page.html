@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios>
+       <ion-title style="color:black">Route N101</ion-title>
+    <ion-buttons slot="start" color="black">
+      <ion-back-button text="" defaultHref="/" style="--color:black"></ion-back-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card>
+<ion-grid>
+
+<ion-row>
+ <ion-col>
+   <ion-row style="margin:0;padding:0">
+    <ion-col>
+       <p style="color:lightgray;font-size:12px;margin:0">Departure</p>
+       <p style="color:black;font-size:15px;margin-top:4px">Bole Sky Line</p>       
+    </ion-col>
+    <ion-col style="text-align:right">
+       <p style="color:lightgray;font-size:12px;margin:0">Arrival</p>
+        <p style="color:black;font-size:15px;margin-top:4px">Atobis Terra</p>       
+    </ion-col>
+  </ion-row>
+   <ion-row style="margin:0 !important;padding:0">
+    <ion-col>
+       <p style="color:lightgray;font-size:12px;margin:0">Departure Time</p>
+       <p style="color:black;font-size:15px;margin-top:4px">8:00AM</p>       
+    </ion-col>
+   <ion-col style="text-align:right">
+       <p style="color:lightgray;font-size:12px;margin:0">Seats Booked</p>
+        <p style="color:black;font-size:15px;margin-top:4px">2</p>       
+    </ion-col>
+  </ion-row>
+
+    <ion-row style="margin:0 !important;padding:0">
+    <ion-col>
+       <p style="color:lightgray;font-size:12px;margin:0">Trip Id</p>
+       <p style="color:orange;font-size:15px;margin-top:4px">MB001</p>       
+    </ion-col>
+   <ion-col style="text-align:right">
+       <p style="color:lightgray;font-size:12px;margin:0">Total Fare</p>
+        <p style="color:black;font-size:15px;margin-top:4px"><span style="color:green">60</span> birr</p>       
+    </ion-col>
+  </ion-row>
+
+  </ion-col>
+  </ion-row>
+
+  <ion-button (click)='openModal()' size="small">Cancel</ion-button>
+</ion-grid>
+
+</ion-card>
+

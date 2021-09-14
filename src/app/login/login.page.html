@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic 5 Form
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+ <ion-card style="margin-left:50px;margin-right:50px;margin-top:20px">
+  <div>
+    <form (ngSubmit)="signin()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            
+            <ion-item>
+              <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col>
+          <ion-button size="small" full type="submit" [disabled]="!registerForm.form.valid" (click)="goSignup()">Login</ion-button>
+                      <ion-button routerLink="/tabs" >Book your next trip</ion-button>
+
+        </ion-col>
+      </ion-row>
+       
+    </form>
+  </div>
+
+  </ion-card>
+
+  <button style="color:blue;margin-left:50px"ion-button block clear routerLink="/tabs">Create New Account</button>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <a (click)="goSignup()" >my buttongg </a>
+            <ion-button routerLink="/tabs" >Book your next trip</ion-button>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col align-self-center>
+        <ion-button (click)="goSignup()" expand="block" color="primary">Register</ion-button>
+
+        <button (click)="goSignup()" class="divider line one-line">my button </button>
+    <ion-button routerLink="/tabs" >Book your next trip</ion-button>
+
+        <span class="already">Already a user?</span>
+
+        <ion-button [routerLink]="['/login']" expand="block" color="danger">Sign In</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input [(ngModel)]="username" type="text" value=""></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input [(ngModel)]="password"  type="password" value=""></ion-input>
+  </ion-item>
+
+</ion-list>
+
+<div padding>
+  <button primary block  (click)="login()">Sign In</button>
+</div>

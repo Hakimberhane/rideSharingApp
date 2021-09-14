@@ -1,3 +1,36 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+
+<ion-app>   
+     <ion-menu side="start" menuId="first" contentId="content">  
+       <ion-content>  
+        
+       <div class="menu-header-bg"> </div>
+      
+        <div class="header-content">  
+              
+           <ion-label>
+              <h2 class="menu-header-name"> Mariam Steven</h2>
+              <p style="color:white"><span style="color:#000039; font-size:16px">Phone: </span>0940290247</p>
+              <p style="color:white"><span style="color:#000039; font-size:16px">Email: </span>Hakimberhane@gmail.com</p>
+            </ion-label>
+            <p style="color:blue">Edit</p>
+
+         </div>
+           <ion-list class="menu-items" *ngFor="let pages of navigate">  
+
+          <ion-menu-toggle autoHide="false">
+
+             <ion-item class="ion-no-padding" [routerLink]="pages.url" lines="full"> 
+             <ion-img  src={{pages.icon}} slot="start"></ion-img>
+                    {{pages.title}}   
+             </ion-item>  
+          </ion-menu-toggle>  
+
+         </ion-list>  
+
+       </ion-content>   
+     </ion-menu>  
+     <ion-router-outlet Id="content"></ion-router-outlet>  
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA74uWzMUNK53ANgEz5FuNauB2GgYT4qZo&libraries=places&**callback=initMap**" async defer></script>
+   </ion-app>   
+
+

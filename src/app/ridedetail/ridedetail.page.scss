@@ -1,0 +1,47 @@
+ion-input {
+  input {
+    text-align: center;
+  }
+
+}
+
+.numberLabel {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+#map {
+	
+	height:50%;
+	width:300px;
+}
+
+agm-map {
+  height: 300px;
+}
+
+.seatsLabel {
+line-height: 1.9em;
+margin-top:100px;
+padding-top:10px;
+}
+
+
+.bookButton {
+  margin-left: 10px;
+  margin-right: 10px;
+box-shadow: 4px 11px 19px -9px rgba(18,17,17,0.41);
+-webkit-box-shadow: 4px 11px 19px -9px rgba(18,17,17,0.41);
+-moz-box-shadow: 4px 11px 19px -9px rgba(18,17,17,0.41);
+}
+
+
+.btn {
+  height: 30px;
+  width: 30px;
+  margin-top:0px;
+  padding-top:0px;
+  margin-left:0px;
+  padding-left:0px
+}

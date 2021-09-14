@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios>
+       <ion-title>Log in</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="lightgrey"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+      <div style="height:100%;display:flex;align-items:center;justify-content: center">
+
+<ion-card style="width:70%;background-color:red">
+
+ <form [formGroup]="loginForm" (ngSubmit)="SignIn()">
+
+    <ion-item lines="full">
+      <ion-label position="floating" style="color:lightgray">Phone Number:</ion-label>
+      <ion-input type="text" formControlName="phoneNumber" required></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating" style="color:lightgray">Password:</ion-label>
+      <ion-input type="text" formControlName="password" required></ion-input>
+    </ion-item>
+
+  
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" size="small" >Sign in nw</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-card>
+
+  </div>
+
+  <ion-button style="color:blue;margin-left:60px; margin-top:0px;padding:0px;text-transform:none" fill="clear" size="small" routerLink="/signupuser">Create New Account</ion-button>
+
+
+</ion-content>

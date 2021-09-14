@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode=ios>
+       <ion-title>Select your time</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  defaultHref="/" color="lightgrey"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+
+<ion-item [detail]="selectedTime?'true':'false'"> 
+   
+   <ion-label>
+
+     <div (click)="selectedTime && goToDetailPage()">
+       <h3>From: <span>Bole Skylight hotel</span></h3>
+       <h3>To: <span>Atobis tera</span></h3>
+       <p style="color:green">Time: <span style="color:black">{{selectedTime}}</span></p>
+     <ion-button color="light" style="color:blue" (click)="goToDetailPage()">Next</ion-button>
+     </div>
+   </ion-label>
+
+  </ion-item>
+<div>
+
+<ion-grid>
+   <ion-row>
+    <ion-col *ngFor="let item of dayswithhrs">
+      <div>
+
+        <ion-button #first  size="small"  shape="round" fill="outline" (click)="listAvailableTimes($event.target,item.day)"[ngStyle]="{'color':buttonClicked == 'Mon' ? 'orange' : '#5acbff' }"> {{item.day}} </ion-button>          
+     </div>
+    </ion-col>
+
+  
+  </ion-row>
+</ion-grid>
+</div>
+
+
+ <ion-list *ngFor="let item of items" detail="false"  no-padding style="border-bottom: 1px solid lightgray;">
+
+ <ion-item lines="none">   
+   <ion-label>
+     <div>
+      <h3 style="color:blue" (click)="pickTime($event.target)">{{item}}</h3>
+     </div>
+   </ion-label>
+  </ion-item>
+
+ 
+</ion-list>
+</ion-content>
